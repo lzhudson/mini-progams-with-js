@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var carta1_user1, carta2_user1, carta3_user1,carta1_user2,carta2_user2,carta3_user2;
+		function gerarcartasuser1() {
+			carta1_user1 = Math.floor((Math.random() * 13) + 1);
+			document.getElementById("carta1_user1").innerHTML = carta1_user1 + " + ";
+			carta2_user1 = Math.floor((Math.random() * 13) + 1);
+			document.getElementById("carta2_user1").innerHTML = carta2_user1 + " + ";
+			carta3_user1 = Math.floor((Math.random() * 13) + 1);
+			document.getElementById("carta3_user1").innerHTML = carta3_user1;
+
+			var somacartasuser_1 = carta1_user1 + carta2_user1 +carta3_user1;
+			return somacartasuser_1;
+		}
+		function gerarcartasuser2() {
+			carta1_user2 = Math.floor((Math.random() * 13) + 1);
+			document.getElementById("carta1_user2").innerHTML = carta1_user2 + " + ";
+			carta2_user2 = Math.floor((Math.random() * 13) + 1);
+			document.getElementById("carta2_user2").innerHTML = carta2_user2 + " + ";
+			carta3_user2 = Math.floor((Math.random() * 13) + 1);
+			document.getElementById("carta3_user2").innerHTML = carta3_user2 + " + ";
+			var somacartasuser_2 = carta1_user2 + carta2_user2 + carta3_user2;
+			return somacartasuser_2;
+		}
+		function verficavitoria(soma1,soma2){
+			document.getElementById("demo1").innerHTML = soma1;
+			document.getElementById("demo2").innerHTML = soma2;
+			document.getElementById("igual").innerHTML = " = ";
+			document.getElementById("igual2").innerHTML = " = ";
+			if (soma1 === 21 && soma2 === 21)  {
+				console.log("Os jogadores venceram");
+			}
+			if (soma1 === 21) {
+				console.log("Jogador 1 Venceu");
+			}
+			if (soma2 === 21) {
+				console.log("Jogador 2 Venceu");
+			}
+		}
+	</script>
+	<button onclick="verficavitoria(gerarcartasuser1(),gerarcartasuser2())">Click Me</button>
+	<span id="carta1_user1"></span>
+	<span id="carta2_user1"></span>
+	<span id="carta3_user1"></span>
+	<span id="igual"></span>
+	<span id="demo1">	</span><br>
+	<span id="carta1_user2"></span>
+	<span id="carta2_user2"></span>
+	<span id="carta3_user2"></span>
+	<span id="igual2"></span>
+	<span id="demo2">	</span>
+</body>
+</html>
